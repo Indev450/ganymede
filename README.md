@@ -6,11 +6,19 @@ Can be (for the most part) a drop-in alternative for [dione](https://github.com/
 
 ## Installing
 
-TODO
+```sh
+go install github.com/Indev450/ganymede@latest
+```
+
+This should install latest version of bot into your go path (usually `~/go/bin/`)
 
 ## Running
 
-TODO
+Assuming program is installed into `~/go/bin/`
+
+```sh
+DISCORD_TOKEN=<your token> SRB2KART_ADDRESS=<ip:port of server> ~/go/bin/ganymede
+```
 
 ## Environment variables
 
