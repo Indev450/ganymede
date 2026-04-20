@@ -53,7 +53,7 @@ func copyleft() {
 
 func main() {
 	// Target server for bot
-	address := ensureEnv("SRB2KART_ADDRESS")
+	address := defaultEnv("SRB2KART_ADDRESS", "127.0.0.1:5029")
 
 	// Which protocol to use?
 	protocol_name := defaultEnv("SRB2KART_PROTOCOL", "srb2kart-16p")
