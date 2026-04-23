@@ -21,6 +21,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/signal"
 	"github.com/Indev450/ganymede/kart"
 )
 
@@ -138,5 +139,8 @@ func main() {
 	}
 
 	// Run until canceled manually
-	for {}
+	sigch := make(chan os.Signal, 1)
+	signal.Notify(sigch, os.Interrupt)
+	<-sigch
+	// TODO - notify kart and discord threads so they can terminate gracefully?
 }
