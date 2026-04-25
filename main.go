@@ -57,7 +57,7 @@ func main() {
 	address := defaultEnv("SRB2KART_ADDRESS", "127.0.0.1:5029")
 
 	// Which protocol to use?
-	protocol_name := defaultEnv("SRB2KART_PROTOCOL", "srb2kart-16p")
+	protocol_name := defaultEnv("SRB2KART_PROTO", "srb2kart-16p")
 
 	// Override for gametype in status ("Watching n players %s")
 	status_gametype := os.Getenv("SRB2KART_STATUS_GAMEMODE")
