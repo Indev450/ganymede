@@ -52,10 +52,6 @@ func buildBotStatus(config *DiscordBotConfig, connection *kart.KartConnection) (
 		return "dnd", "until you'll help me"
 	}
 
-	if len(info.Players) == 0 {
-		return "online", "an empty map"
-	}
-
 	numplayers := len(info.Players)
 
 	if len(config.SeedPlayer) > 0 {
@@ -65,6 +61,10 @@ func buildBotStatus(config *DiscordBotConfig, connection *kart.KartConnection) (
 				break
 			}
 		}
+	}
+
+	if numplayers == 0 {
+		return "online", "an empty map"
 	}
 
 	gametype := info.Gametype
