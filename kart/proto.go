@@ -33,6 +33,8 @@ func GetProtocol(name string) KartProtocol {
 		return VanillaProtocol {}
 	case "blankart":
 		return BlankartProtocol {}
+	case "neptune":
+		return NeptuneProtocol {}
 	case "ringracers-16p":
 		return RingracersProtocol {}
 	default:
