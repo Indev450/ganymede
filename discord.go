@@ -49,7 +49,7 @@ func buildBotStatus(config *DiscordBotConfig, connection *kart.KartConnection) (
 	info, ok := connection.GetServerInfo()
 
 	if !ok {
-		return "dnd", "until you'll help me"
+		return "dnd", "Watching until you'll help me"
 	}
 
 	numplayers := len(info.Players)
@@ -64,7 +64,7 @@ func buildBotStatus(config *DiscordBotConfig, connection *kart.KartConnection) (
 	}
 
 	if numplayers == 0 {
-		return "online", "an empty map"
+		return "online", "Watching an empty map"
 	}
 
 	gametype := info.Gametype
@@ -73,7 +73,7 @@ func buildBotStatus(config *DiscordBotConfig, connection *kart.KartConnection) (
 		gametype = config.StatusGametype
 	}
 
-	return "online", fmt.Sprintf("%d players %s", numplayers, gametype)
+	return "online", fmt.Sprintf("Watching %d players %s", numplayers, gametype)
 }
 
 func botStatusUpdateThread(session *discordgo.Session, config *DiscordBotConfig, connection *kart.KartConnection) {
