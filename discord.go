@@ -64,7 +64,7 @@ func buildBotStatus(config *DiscordBotConfig, connection *kart.KartConnection) (
 	}
 
 	if numplayers == 0 {
-		return "online", "Watching an empty map"
+		return "online", "Waiting for players..."
 	}
 
 	gametype := info.Gametype
